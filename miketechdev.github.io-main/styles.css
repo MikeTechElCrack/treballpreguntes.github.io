@@ -1,0 +1,293 @@
+:root{
+--font: 'Martel Sans' ,'sans-serif';
+--blanc: #eeeeee;
+--negre: #222222;
+}
+html{
+	box-sizing:border-box;
+	font-family:var(--font);
+	font-size:1rem;
+	scroll-behavior:smooth;
+	margin:0;
+	padding:0;
+}
+
+*,*::after,*::before{
+	box-sizing:border-box;
+	scroll-behavior:smooth;
+	margin:0;
+}
+
+*::selection{
+	background-color:black;
+}
+
+body{
+	margin:0;
+	overflow-x:hidden;
+}
+
+/*header*/
+.header{
+	width:100vw;
+	display:flex;
+	justify-content:center;
+}
+.img-titol{
+	width:400rem;
+	min-width:1000px;
+}
+
+.h1{
+	font-size:6vw;
+	position:absolute;
+	top:250px;
+	left:32vw;
+	color:white;
+}
+/*nav*/
+.nav{
+	position:fixed;
+	z-index:3000
+}
+.nav-1{
+	position:fixed;
+	display:flex;
+	top:0;
+	left:0;
+	width:100vw;
+	height:20vh;
+	justify-content:space-between;
+	align-items:center;
+	animation-name: posarColor;
+	animation-duration:1s;
+	animation-fill-mode: forwards;
+}
+
+#hamburguesa-svg, #creu-svg{
+	width:3rem;
+	fill:white;
+	animation-name: apareixer;
+	animation-duration: 1s;
+	animation-name: fersePetit;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+}
+
+#hamburguesa-svg:hover, #creu-svg:hover{
+	animation-name: ferseGran;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+}
+
+.menu{
+	margin-right:8vw;
+	width:3rem;
+	display:flex;
+}
+.no{
+	display:none;
+}
+
+.foto-perfil {
+	width:20vw;
+	max-width:300px;
+	min-width:200px;
+	margin-left:3vw;
+}
+
+
+
+.enllacos{
+	position:fixed;
+	width:100vw;
+	height:83vh;
+	display:flex;
+	top:10vh;
+	right:15px;
+	align-items:center;
+	flex-direction:column;
+	justify-content:space-around;
+	z-index:3000;
+	
+}
+
+.enllacos a{
+	text-decoration:none;
+	color:white;
+	font-size:2rem;
+}
+
+
+
+.nav-2{
+	position:fixed;
+	width:100vw;
+	height:80vh;
+	top:20vh;
+	animation-name: apareixerEnllacos;
+	animation-duration:0.4s;
+	animation-fill-mode: forwards;
+	z-index:100;
+}
+
+
+/*main*/
+
+.main{
+	width:100px;
+	height:30px;
+	background-color:red;
+}
+
+
+.introduccio{
+	position:relative;
+	height:500px;
+}
+
+
+.p{
+	margin-bottom:70px;
+}
+
+.h2{
+	display:flex;
+	justify-content:center;
+	margin:30px 0;
+	margin-bottom:60px;
+	padding:0px 10px;
+	border-left:4px solid;
+	border-right:4px solid;
+}
+
+.lin{
+	width:80vw;
+	border-bottom:5px dotted white;
+	margin:100px 0;
+}
+
+
+.img{
+	clip-path:circle(40%);
+}
+
+.c{
+width:100%;
+display:flex;
+justify-content:space-around;
+}
+
+.footer{
+	width:100vh;
+	position:fixed;
+	z-index:300000000;
+	background-color:var(--negre);
+	color:var(--blanc);
+	top:96vh;
+	display:flex;
+	justify-content:center;
+  }
+  
+
+
+.quadre-text{
+	position:absolute;
+	top:400px;
+	padding-top:10vh;
+	width:100vw;
+	height:200vh;
+	background-color:var(--negre);
+	z-index:1;
+	color:var(--blanc);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding-left:10vw;
+	padding-right:12vw;
+	text-align:justify;
+	font-size:4vw;
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+ .quadre-text{
+	height:3200px;
+	font-size:22px;
+}
+  
+}
+
+  
+}
+
+@media screen and (min-width: 1000px) and (orientation:portrait){
+.quadre-text{
+	height:2700px;
+	font-size:22px;
+}
+
+.footer{
+	top:98vh;
+	width:98vw;
+}
+
+
+  
+  
+}
+
+
+@media screen and (min-width: 1000px) and (orientation:landscape){
+.quadre-text{
+	height:2500px;
+	font-size:22px;
+}
+
+.footer{
+	top:96vh;
+	width:98vw;
+}
+
+  
+  
+}
+
+
+
+@keyframes apareixer {
+  from {opacity:0}
+  to {opacity:1}
+}
+
+
+
+
+
+@keyframes posarColor {
+  from {background-color:transparent}
+  to {
+		background-color:black;
+		opacity:0.7;
+	}
+}
+
+@keyframes ferseGran {
+  from {scale:1}
+  to {scale:1.5}
+}
+
+@keyframes fersePetit {
+  from {scale:1.5}
+  to {scale:1}
+}
+
+@keyframes apareixerEnllacos {
+  from {}
+ 
+	to {
+		background-color:black;
+		opacity:0.7;
+	}
+}
